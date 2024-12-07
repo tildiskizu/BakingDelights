@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="logo" href="assets/logo.png" />
+    <title>Baking Delights</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff5e6; /* Warna krem */
+        color: #6b4226; /* Warna coklat */
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f8e1c4;
+        padding: 10px 20px;
+        border-bottom: 2px solid #d3a377;
+      }
+      nav a {
+        text-decoration: none;
+        color: #6b4226;
+        font-weight: bold;
+        margin: 0 10px;
+      }
+      nav a:hover {
+        color: #d17b4e;
+      }
+      .logo img {
+        width: 100px;
+      }
+      .form-login {
+        background-color: #fbe5d3;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin: 50px auto;
+      }
+      .form-login input {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #d3a377;
+        border-radius: 5px;
+      }
+      .form-login button {
+        background-color: #d17b4e;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .form-login button:hover {
+        background-color: #a85d32;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f8e1c4;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <header>
+        <nav>
+          <div class="logo">
+            <img src="assets/logo.png" alt="Baking Delights Logo" />
+          </div>
+          <a href="index.html">Home</a>
+          <a href="#">Recipes</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </header>
+      <main>
+        <div class="form-login">
+          <h3>Login to Baking Delights</h3>
+          <input type="text" name="username" placeholder="Username" />
+          <input type="password" name="password" placeholder="Password" />
+          <button type="submit">Login</button>
+          <a href="register.html">Register Here</a>
+        </div>
+      </main>
+      <footer>
+        <h4>&copy; Baking Delights 2023</h4>
+      </footer>
+    </center>
+  </body>
+</html>

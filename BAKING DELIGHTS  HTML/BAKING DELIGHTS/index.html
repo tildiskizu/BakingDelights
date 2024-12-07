@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="logo" href="assets/logo.png" />
+    <title>Baking Delights</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff5e6; /* Warna krem untuk suasana bakery */
+        color: #6b4226; /* Warna coklat */
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f8e1c4;
+        padding: 10px 20px;
+        border-bottom: 2px solid #d3a377;
+      }
+      nav a {
+        text-decoration: none;
+        color: #6b4226;
+        font-weight: bold;
+        margin: 0 10px;
+      }
+      nav a:hover {
+        color: #d17b4e;
+      }
+      .logo img {
+        width: 100px;
+      }
+      .jumbotron {
+        text-align: center;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fbe5d3;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .jumbotron img {
+        width: 300px;
+        margin: 10px auto;
+      }
+      .jumbotron button {
+        background-color: #d17b4e;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .jumbotron button:hover {
+        background-color: #a85d32;
+      }
+      .cards-categories {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px auto;
+      }
+      .card {
+        background-color: #fbe5d3;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .card img {
+        width: 150px;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f8e1c4;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <header>
+        <nav>
+          <div class="logo">
+            <img src="assets/logo.png" alt="Baking Delights Logo" />
+          </div>
+          <a href="index.html">Home</a>
+          <a href="#">Recipes</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </header>
+      <main>
+        <div class="jumbotron">
+          <h1>Welcome to Baking Delights</h1>
+          <p>Your source for delicious recipes and baking inspirations</p>
+          <img src="assets/jumbotron.png" alt="Baking Banner" />
+          <button type="button">Explore Recipes</button>
+        </div>
+        <div class="cards-categories">
+          <div class="card">
+            <img src="assets/cromboloni.png" alt="cromboloni" />
+            <p>Delicious Cakes</p>
+          </div>
+          <div class="card">
+            <img src="assets/muffin.png" alt="muffin" />
+            <p>Homemade Cookies</p>
+          </div>
+          <div class="card">
+            <img src="assets/croissant.png" alt="croissant" />
+            <p>Artisan Bread</p>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <h4>&copy; Baking Delights 2023</h4>
+      </footer>
+    </center>
+  </body>
+</html>

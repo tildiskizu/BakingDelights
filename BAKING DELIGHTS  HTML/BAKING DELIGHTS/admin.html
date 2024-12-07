@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="logo" href="assets/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Baking Delights</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff5e6;
+        color: #6b4226;
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f8e1c4;
+        padding: 10px 20px;
+        border-bottom: 2px solid #d3a377;
+      }
+      nav a {
+        text-decoration: none;
+        color: #6b4226;
+        font-weight: bold;
+        margin: 0 10px;
+      }
+      nav a:hover {
+        color: #d17b4e;
+      }
+      .logo img {
+        width: 100px;
+      }
+      .sidebar {
+        width: 200px;
+        background-color: #fbe5d3;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding-top: 20px;
+        border-right: 2px solid #d3a377;
+      }
+      .sidebar a {
+        display: block;
+        text-decoration: none;
+        color: #6b4226;
+        padding: 10px 20px;
+        margin: 5px 0;
+      }
+      .sidebar a:hover {
+        background-color: #d17b4e;
+        color: white;
+      }
+      .content {
+        margin-left: 220px;
+        padding: 20px;
+      }
+      .content h1 {
+        color: #d17b4e;
+      }
+      .content p {
+        margin: 20px 0;
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #f8e1c4;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border-top: 2px solid #d3a377;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Baking Delights Logo" />
+      </div>
+      <a href="#">Dashboard</a>
+      <a href="categories/categories.html">Recipes</a>
+      <a href="orders/orders.html">Orders</a>
+      <a href="#">Log out</a>
+    </div>
+    <div class="content">
+      <header>
+        <nav>
+          <div class="logo">
+            <h2>Baking Delights Admin </h2>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <h1>Welcome, Admin!</h1>
+        <p>Manage your baking recipes, track orders, and more with ease.</p>
+      </main>
+    </div>
+    <footer>
+      <h4>&copy; Baking Delights 2023</h4>
+    </footer>
+  </body>
+</html>
