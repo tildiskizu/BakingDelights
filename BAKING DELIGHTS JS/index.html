@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" type="text/css" href="css/styless.css" />
+    <title>Baking Delights</title>
+</head>
+<body>
+    <center>
+        <header>
+            <nav>
+                <div class="logo" id="logo">
+                    <img src="assets/logo.png" alt="Baking Delights Logo" width="150" height="auto" />
+                </div>
+                <a href="index.html" id="homeLink">Home</a>
+                <a href="#" id="categoryLink">Categories</a>
+                <a href="login.html" id="loginLink">Login</a>
+            </nav>
+        </header>
+        <main>
+            <div class="jumbotron" id="jumbotron">
+                <h1>Discover Delicious Recipes</h1>
+                <p>Join us to explore and bake delightful creations!</p>
+                <img src="assets/jumbotron.png" alt="Baking Delights Banner" width="450" height="250" id="jumbotronImage" />
+                <div class="arrow arrow-left" onclick="prevImage()">&lt;</div>
+                <div class="arrow arrow-right" onclick="nextImage()">&gt;</div>
+                <div class="center">
+                    <button type="button" id="getStartedBtn">GET STARTED</button>
+                </div>
+            </div>
+            <div class="cards-categories" id="carousel">
+                <div class="card" id="card1">
+                    <img src="assets/cromboloni.png" alt="Delicious Cakes" width="300" height="auto" />
+                    <p>Delicious Cakes</p>
+                </div>
+                <div class="card" id="card2">
+                    <img src="assets/muffin.png" alt="Homemade Muffin" width="300" height="auto" />
+                    <p>Homemade Cookies</p>
+                </div>
+                <div class="card" id="card3">
+                    <img src="assets/croissant.png" alt="Artisan Bread" width="300" height="auto" />
+                    <p>Artisan Bread</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h5>&copy; Baking Delights 2023</h5>
+        </footer>
+    </center>
+    <script src="js/script.js"></script>
+</body>
+</html>

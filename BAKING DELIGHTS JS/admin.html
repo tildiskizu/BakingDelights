@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking Delights</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/styless.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Baking Delights</h1>
+    </div>
+    <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Resep</a>
+        <a href="#">Kontak</a>
+        <a href="categories/categories.html">Kategori</a>
+    </nav>
+    <div class="banner">
+        <img src="assets/jumbotron.png" alt="Promo Baking Delights">
+    </div>
+    <div class="recipes">
+        <div class="recipe" onclick="showPopupAsync('Cromboloni', 'assets/Cromboloni.png')">
+            <img src="assets/cromboloni.png" alt="Cromboloni">
+            <div class="tags">
+                <span>Bahan Utama: Tepung, Ragi</span>
+                <span>Cara Membuat: Mudah & Cepat</span>
+            </div>
+        </div>
+        <div class="recipe" onclick="showPopupAsync('Muffin', 'assets/muffin.png')">
+            <img src="assets/muffin.png" alt="Muffin">
+            <div class="tags">
+                <span>Bahan Utama: Telur, Mentega</span>
+                <span>Cara Membuat: Bisa Dilakukan di Rumah</span>
+            </div>
+        </div>
+        <div class="recipe" onclick="showPopupAsync('Croissant', 'assets/croissant.png')">
+            <img src="assets/croissant.png" alt="Croissant">
+            <div class="tags">
+                <span>Bahan Utama: Tepung, Mentega</span>
+                <span>Cara Membuat: Tips dari Chef</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup box -->
+    <div id="popup-overlay" class="popup-overlay">
+        <div class="popup-box">
+            <span class="close-btn" onclick="hidePopup()">×</span>
+            <h2 id="popup-title">Loading...</h2>
+            <img id="popup-image" src="" alt="Gambar Produk">
+            <p id="popup-details">Sedang memuat detail resep...</p>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan popup dengan data resep yang didapat secara asinkron
+        async function showPopupAsync(title, imageSrc) {
+            // Tampilkan popup dengan status 'Loading...'
+            document.getElementById("popup-title").textContent = "Loading...";
+            document.getElementById("popup-image").src = "";
+            document.getElementById("popup-details").textContent = "Sedang memuat detail resep...";
+            document.getElementById("popup-overlay").style.display = "flex";
+
+            try {
+                // Simulasi pengambilan data resep secara asinkron (misalnya dari server)
+                const recipeDetails = await fetchRecipeDetails(title, imageSrc);
+
+                // Update isi popup dengan data resep
+                document.getElementById("popup-title").textContent = recipeDetails.title;
+                document.getElementById("popup-image").src = recipeDetails.imageSrc;
+                document.getElementById("popup-details").textContent = recipeDetails.details;
+            } catch (error) {
+                document.getElementById("popup-details").textContent = "Gagal memuat detail resep.";
+            }
+        }
+
+        // Fungsi simulasi untuk mengambil detail resep secara asinkron
+        function fetchRecipeDetails(title, imageSrc) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve({
+                        title: title,
+                        imageSrc: imageSrc,
+                        details: "Detail lengkap untuk resep " + title + ". Nikmati cara membuatnya yang mudah dan lezat!"
+                    });
+                }, 1000); // Simulasi penundaan 1 detik
+            });
+        }
+
+        function hidePopup() {
+            document.getElementById("popup-overlay").style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/logo.png" alt="Baking Delights Logo" width="100" height="auto"/>
+    <link rel="stylesheet" type="text/css" href="css/styless.css">
+    <title>Login - Baking Delights</title>
+    <script>
+        function login() {
+            var username = document.getElementsByName('username')[0].value;
+            var password = document.getElementsByName('password')[0].value;
+
+            // Check if username and password are not empty
+            if (username !== '' && password !== '') {
+                alert('Login Successful! Welcome to Baking Delights, ' + username + ' 😊');
+            } else {
+                // Show error if any field is empty
+                alert('Please enter both Username and Password!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Baking Delights Logo" width="150" height="auto" />
+                </div>
+                <a href="index.html">Home</a>
+                <a href="#">Recipes</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </header>
+        <main>
+            <div class="form-login">
+                <h3>Welcome to Baking Delights!</h3>
+                <p>Login to explore our delicious recipes and baking tips!</p>
+                <input type="text" name="username" class="input" placeholder="Enter your Username" />
+                <input type="password" name="password" class="input" placeholder="Enter your Password" />
+                <button type="button" class="btn_login" onclick="login()">Login</button>
+                <p>Don't have an account? <a href="register.html" class="link-register">Sign up here</a></p>
+            </div>
+        </main>
+        <footer>
+            <h5>&copy; Baking Delights 2024</h5>
+        </footer>
+    </div>
+</body>
+</html>
