@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../assets/icon.png" />
+  <link rel="stylesheet" href="../css/admin.css" />
+  <!-- Boxicons CDN Link -->
+  <link
+    href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+    rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baking Delights Admin | Input Kategori</title>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <img src="../assets/logo.png" alt="Logo Baking Delights" style="width: 80px;"/>
+      <span class="logo_name">Baking Delights</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="../admin.html" class="active">
+          <i class="bx bx-grid-alt"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="../categories/categories.html">
+          <i class="bx bx-cake"></i>
+          <span class="links_name">Kategori Produk</span>
+        </a>
+      </li>
+      <li>
+        <a href="../transaction/favorites.html">
+          <i class="bx bx-list-ul"></i>
+          <span class="links_name">Favorites</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-log-out"></i>
+          <span class="links_name">Keluar</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class="bx bx-menu sidebarBtn"></i>
+      </div>
+      <div class="profile-details">
+        <span class="admin_name">Admin Baking Delights</span>
+      </div>
+    </nav>
+    <div class="home-content">
+      <h3>Input Kategori Produk</h3>
+      <div class="form-login">
+        <form action="">
+          <label for="category_name">Nama Kategori</label>
+          <input class="input" type="text" name="category_name"
+            id="category_name" placeholder="Nama Kategori" />
+          
+          <label for="category_description">Deskripsi Kategori</label>
+          <input class="input" type="text" name="category_description"
+            id="category_description" placeholder="Deskripsi Kategori" />
+          
+          <label for="difficulty_level">Tingkat Kesulitan</label>
+          <select class="input" name="difficulty_level" id="difficulty_level">
+            <option value="Mudah">Mudah</option>
+            <option value="Sedang">Sedang</option>
+            <option value="Sulit">Sulit</option>
+          </select>
+
+          <label for="photo">Foto Kategori</label>
+          <input type="file" name="photo" id="photo" style="margin-bottom: 20px" />
+
+          <button type="submit" class="btn btn-simpan" name="simpan">
+            Simpan
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function () {
+      sidebar.classList.toggle("active");
+      if (sidebar.classList.contains("active")) {
+        sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else {
+        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      }
+    };
+  </script>
+</body>
+</html>
